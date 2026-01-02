@@ -6,7 +6,9 @@ function App() {
 
   return (
     <>
-      fitlyyy
+      <div className="text-3xl font-bold text-blue-500">
+      Tailwind is finally working 🚀
+    </div>
 
     </>
   )
