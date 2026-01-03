@@ -1,1 +1,200 @@
 @import "tailwindcss";
+
+.stick {
+  margin: 24px auto;
+}
+
+.paused * {
+  animation-play-state: paused;
+}
+
+/* ---------- Squat ---------- */
+.squat.leg {
+  animation: squatLeg 1.4s infinite ease-in-out;
+}
+
+.squat.arm {
+  animation: squatArm 1.4s infinite ease-in-out;
+}
+
+@keyframes squatLeg {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(25px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes squatArm {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-20deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* ---------- Lunge ---------- */
+.lunge.leg.left {
+  animation: lungeFront 1.4s infinite ease-in-out;
+}
+
+.lunge.leg.right {
+  animation: lungeBack 1.4s infinite ease-in-out;
+}
+
+@keyframes lungeFront {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(18px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes lungeBack {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-14px); }
+  100% { transform: translateX(0); }
+}
+
+/* ---------- Hold ---------- */
+.hold {
+  animation: holdPulse 1.2s infinite ease-in-out;
+}
+
+@keyframes holdPulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+.pushup.arm {
+  animation: pushArm 1.2s infinite ease-in-out;
+}
+
+.pushup.leg {
+  animation: pushLeg 1.2s infinite ease-in-out;
+}
+
+@keyframes pushArm {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(25deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes pushLeg {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+  100% { transform: translateY(0); }
+}
+
+
+
+.armRaise.arm {
+  animation: raiseArm 1.4s infinite ease-in-out;
+}
+
+@keyframes raiseArm {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-60deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+.tap.arm.left {
+  animation: tapLeft 1.2s infinite ease-in-out;
+}
+
+.tap.arm.right {
+  animation: tapRight 1.2s infinite ease-in-out;
+}
+
+@keyframes tapLeft {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes tapRight {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+
+.superman.arm,
+.superman.leg {
+  animation: supermanLift 1.4s infinite ease-in-out;
+}
+
+@keyframes supermanLift {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+
+.row.arm {
+  animation: rowPull 1.3s infinite ease-in-out;
+}
+
+@keyframes rowPull {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(30deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.stretch {
+  animation: stretchPulse 1.6s infinite ease-in-out;
+}
+
+@keyframes stretchPulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+.jack.arm {
+  animation: jackArm 0.9s infinite ease-in-out;
+}
+
+.jack.leg {
+  animation: jackLeg 0.9s infinite ease-in-out;
+}
+
+@keyframes jackArm {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-70deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes jackLeg {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(30deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.knees.leg.left {
+  animation: kneeLeft 0.8s infinite ease-in-out;
+}
+
+.knees.leg.right {
+  animation: kneeRight 0.8s infinite ease-in-out;
+}
+
+@keyframes kneeLeft {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes kneeRight {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
+}
+
+
+.climber.arm,
+.climber.leg {
+  animation: climberMove 0.9s infinite ease-in-out;
+}
+
+@keyframes climberMove {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+  100% { transform: translateY(0); }
+}

@@ -56,3 +56,4 @@ const StickFigure = ({ animation, paused }) => {
 };
 
 export default StickFigure;
+

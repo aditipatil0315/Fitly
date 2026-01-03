@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { workouts } from "../data/workouts";
+import StickFigure from "../components/StickFigure";
+
 
 const EXERCISE_DURATION = 60;
 
@@ -85,13 +87,13 @@ const WorkoutPlayer = ({ workoutKey, onFinish }) => {
       {/* Back arrow */}
       <button
         onClick={finishWorkout}
-        className="absolute top-4 left-4 text-white hover:text-gray-400"
+        className="absolute top-10 left-4 text-white hover:text-gray-400"
       >
-        ←
+        ← back
       </button>
 
       {/* Progress bar */}
-      <div className="w-full bg-gray-700 h-2 rounded-full overflow-hidden mb-8">
+      <div className="absolute top-4 left-4 w-[98%] bg-gray-700 h-2 rounded-full overflow-hidden mb-8">
         <div
           className="bg-white h-full transition-all duration-300"
           style={{ width: `${overallProgress}%` }}
@@ -110,6 +112,18 @@ const WorkoutPlayer = ({ workoutKey, onFinish }) => {
         <div className="text-5xl sm:text-6xl font-mono">
           {timeLeft}s
         </div>
+
+        <h2 className="text-xl sm:text-2xl font-semibold">
+  {currentExercise.name}
+</h2>
+
+<StickFigure
+  animation={currentExercise.animation}
+  paused={isPaused}
+/>
+
+
+
 
         <div className="flex gap-4">
           <button
