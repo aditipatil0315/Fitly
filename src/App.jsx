@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Home from "./pages/Home";
-import WorkoutOverview from "./pages/WorkoutOverview";
+import WorkoutSessionSummary from "./pages/WorkoutSessionSummary";
 import WorkoutPlayer from "./pages/WorkoutPlayer";
 import WorkoutSummary from "./pages/WorkoutSummary";
 
@@ -26,7 +26,7 @@ function App() {
       )}
 
       {selectedWorkout && !isWorkoutStarted && !summary && (
-        <WorkoutOverview
+        <WorkoutSessionSummary
           workoutKey={selectedWorkout}
           onBack={() => setSelectedWorkout(null)}
           onStart={() => setIsWorkoutStarted(true)}
