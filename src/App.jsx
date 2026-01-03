@@ -1,17 +1,50 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import Home from "./pages/Home";
+import WorkoutOverview from "./pages/WorkoutOverview";
+import WorkoutPlayer from "./pages/WorkoutPlayer";
+import WorkoutSummary from "./pages/WorkoutSummary";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedWorkout, setSelectedWorkout] = useState(null);
+  const [isWorkoutStarted, setIsWorkoutStarted] = useState(false);
+  const [summary, setSummary] = useState(null);
+
+  const handleFinish = (summaryData) => {
+    setSummary(summaryData);
+    setIsWorkoutStarted(false);
+  };
+
+  const handleReset = () => {
+    setSelectedWorkout(null);
+    setSummary(null);
+  };
 
   return (
     <>
-      <div className="text-3xl font-bold text-blue-500">
-      Tailwind is finally working 🚀
-    </div>
+      {!selectedWorkout && !summary && (
+        <Home onSelectWorkout={setSelectedWorkout} />
+      )}
 
+      {selectedWorkout && !isWorkoutStarted && !summary && (
+        <WorkoutOverview
+          workoutKey={selectedWorkout}
+          onBack={() => setSelectedWorkout(null)}
+          onStart={() => setIsWorkoutStarted(true)}
+        />
+      )}
+
+      {selectedWorkout && isWorkoutStarted && (
+        <WorkoutPlayer
+          workoutKey={selectedWorkout}
+          onFinish={handleFinish}
+        />
+      )}
+
+      {summary && (
+        <WorkoutSummary summary={summary} onBack={handleReset} />
+      )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
