@@ -11,18 +11,18 @@ const WorkoutSummary = ({ summary, onBack }) => {
   };
 
   // Get flower based on percentage
-  const getCelebrationFlower = () => {
-    if (percentage === 100) return "💐";
-    if (percentage >= 80) return "🌺";
-    if (percentage >= 60) return "🌷";
-    if (percentage >= 40) return "🌼";
-    return "🌸";
-  };
+  // const getCelebrationFlower = () => {
+  //   if (percentage === 100) return "💐";
+  //   if (percentage >= 80) return "🌺";
+  //   if (percentage >= 60) return "🌷";
+  //   if (percentage >= 40) return "🌼";
+  //   return "🌸";
+  // };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-lavender-50 to-peach-50 flex items-center justify-center px-4 py-8">
       
-      {/* Background decorative elements */}
+
       <div className="fixed top-10 left-5 w-10 h-10 rounded-full bg-pink-200/40 animate-float"></div>
       <div className="fixed top-20 right-10 w-8 h-8 rounded-full bg-rose-200/50 animate-float-delayed" 
            style={{ animationDelay: '1s' }}></div>
@@ -32,7 +32,7 @@ const WorkoutSummary = ({ summary, onBack }) => {
            style={{ animationDelay: '0.5s' }}></div>
       
       <div className="w-full max-w-md">
-        {/* Celebration header */}
+
         <div className="text-center mb-8">
           <div className="relative inline-block mb-6">
             <div className="w-24 h-24 rounded-full bg-gradient-to-r from-pink-200 to-rose-200 
@@ -54,11 +54,11 @@ const WorkoutSummary = ({ summary, onBack }) => {
           </p>
         </div>
 
-        {/* Main summary card */}
+
         <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl 
                       border border-pink-200/50 mb-8">
           
-          {/* Percentage circle */}
+
           <div className="relative w-48 h-48 mx-auto mb-8">
             <div className="absolute inset-0 rounded-full border-8 border-pink-100"></div>
             <div className="absolute inset-4 rounded-full bg-gradient-to-r from-pink-50 to-rose-50 
@@ -71,7 +71,7 @@ const WorkoutSummary = ({ summary, onBack }) => {
               </div>
             </div>
             
-            {/* Progress ring */}
+
             <svg className="absolute inset-0 w-full h-full transform -rotate-90">
               <circle
                 cx="96"
@@ -93,7 +93,7 @@ const WorkoutSummary = ({ summary, onBack }) => {
             </svg>
           </div>
 
-          {/* Stats grid */}
+
           <div className="grid grid-cols-3 gap-4 mb-8">
             <div className="bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl p-4 
                           border border-pink-200 text-center">
@@ -114,7 +114,7 @@ const WorkoutSummary = ({ summary, onBack }) => {
             </div>
           </div>
 
-          {/* Progress bar */}
+
           <div className="space-y-3">
             <div className="flex justify-between text-sm">
               <span className="text-rose-600 font-medium">Progress</span>
@@ -132,7 +132,7 @@ const WorkoutSummary = ({ summary, onBack }) => {
           </div>
         </div>
 
-        {/* Encouragement message */}
+
         <div className="bg-gradient-to-r from-pink-100/50 to-rose-100/50 rounded-xl p-4 mb-8 
                       border border-pink-200 backdrop-blur-sm">
           <div className="flex items-center gap-3">
@@ -146,7 +146,7 @@ const WorkoutSummary = ({ summary, onBack }) => {
           </div>
         </div>
 
-        {/* Back button */}
+
         <button
           onClick={onBack}
           className="group relative w-full overflow-hidden bg-gradient-to-r from-pink-400 to-rose-400 
@@ -155,7 +155,7 @@ const WorkoutSummary = ({ summary, onBack }) => {
                    transition-all duration-300 transform hover:-translate-y-1"
         >
           <span className="flex items-center justify-center gap-2 text-lg">
-            🏠 Back to Home
+             Back to Home
           </span>
           <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
           

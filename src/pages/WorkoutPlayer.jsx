@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { workouts } from "../data/workouts";
-import StickFigure from "../components/StickFigure";
+// import StickFigure from "../components/StickFigure";
 
 const EXERCISE_DURATION = 60;
 
@@ -36,7 +36,7 @@ const WorkoutPlayer = ({ workoutKey, onFinish }) => {
     return () => clearInterval(interval);
   }, [isPaused, timeLeft]);
 
-  /* -------- When exercise ends ---------- */
+
   useEffect(() => {
     if (timeLeft > 0) return;
 
@@ -73,7 +73,7 @@ const WorkoutPlayer = ({ workoutKey, onFinish }) => {
     });
   };
 
-  /* -------- Progress calculation -------- */
+
   const currentExerciseProgress =
     (EXERCISE_DURATION - timeLeft) / EXERCISE_DURATION;
 
@@ -157,10 +157,10 @@ const WorkoutPlayer = ({ workoutKey, onFinish }) => {
           
           {/* Stick figure container */}
           <div className="bg-gradient-to-br from-pink-50 to-lavender-50 rounded-xl p-6 border border-pink-200 mb-6">
-            <StickFigure
+            {/* <StickFigure
               animation={currentExercise.animation}
               paused={isPaused}
-            />
+            /> */}
           </div>
           
           {/* Inspirational message */}

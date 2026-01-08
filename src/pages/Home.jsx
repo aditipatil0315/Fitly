@@ -6,7 +6,7 @@ const Home = ({ onSelectWorkout }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-lavender-50 to-peach-50 flex items-center justify-center px-4 py-8">
       <div className="w-full max-w-md">
-        {/* Welcome Header */}
+
         <div className="text-center mb-12">
           <div className="relative inline-block mb-6">
             <div className="w-20 h-20 rounded-full bg-gradient-to-r from-pink-200 to-rose-200 
@@ -20,14 +20,14 @@ const Home = ({ onSelectWorkout }) => {
           </div>
           
           <h1 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 bg-clip-text text-transparent">
-            Fitness Blossom
+            Be Fit and Fabulous
           </h1>
           
           <p className="text-rose-400 text-lg">
             Choose your workout to begin
           </p>
           
-          {/* Animated divider */}
+
           <div className="flex justify-center items-center mt-6 space-x-2">
             <div className="w-8 h-1 bg-gradient-to-r from-pink-300 to-transparent rounded-full"></div>
             <div className="w-2 h-2 rounded-full bg-pink-300"></div>
@@ -35,7 +35,7 @@ const Home = ({ onSelectWorkout }) => {
           </div>
         </div>
 
-        {/* Workout Cards */}
+
         <div className="space-y-6">
           {workoutKeys.map((key, index) => (
             <button
@@ -46,11 +46,11 @@ const Home = ({ onSelectWorkout }) => {
               <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg 
                             border border-pink-200/50 overflow-hidden">
                 
-                {/* Gradient border effect */}
+
                 <div className="absolute inset-0 rounded-2xl p-[1px] bg-gradient-to-r from-pink-200 via-rose-200 to-lavender-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 <div className="relative flex items-center">
-                  {/* Icon with count */}
+
                   <div className="flex-shrink-0 relative">
                     <div className="w-14 h-14 rounded-full bg-gradient-to-br from-pink-100 to-rose-100 
                                   flex items-center justify-center shadow-md">
@@ -64,7 +64,7 @@ const Home = ({ onSelectWorkout }) => {
                     </div>
                   </div>
                   
-                  {/* Workout info */}
+
                   <div className="ml-5 text-left flex-1">
                     <h3 className="text-xl font-bold text-rose-800 mb-1 group-hover:text-pink-600 transition-colors">
                       {workouts[key].title}
@@ -75,13 +75,13 @@ const Home = ({ onSelectWorkout }) => {
                     </div>
                   </div>
                   
-                  {/* Arrow indicator */}
+
                   <div className="flex-shrink-0 text-pink-300 group-hover:text-pink-500 transform group-hover:translate-x-2 transition-transform">
                     <span className="text-2xl">→</span>
                   </div>
                 </div>
                 
-                {/* Hover shine effect */}
+
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
                               translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
               </div>
@@ -89,15 +89,15 @@ const Home = ({ onSelectWorkout }) => {
           ))}
         </div>
 
-        {/* Footer */}
+
         <div className="mt-12 text-center">
           <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/50 backdrop-blur-sm border border-pink-200">
-            <span className="text-pink-500">💫</span>
+            {/* <span className="text-pink-500">💫</span> */}
             <span className="text-sm text-rose-600">Ready to blossom?</span>
-            <span className="text-pink-500">✨</span>
+            {/* <span className="text-pink-500">✨</span> */}
           </div>
           
-          {/* Decorative dots */}
+
           <div className="flex justify-center space-x-2 mt-6">
             {workoutKeys.map((_, i) => (
               <div 

@@ -85,7 +85,7 @@ const WorkoutSessionSummary = ({ workoutKey, onBack, onStart }) => {
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold text-rose-700">Exercise Breakdown</h2>
         <span className="text-sm text-rose-500 bg-rose-50 px-3 py-1 rounded-full">
-          Step by step 🌸
+          Step by step
         </span>
       </div>
 
@@ -158,9 +158,9 @@ const WorkoutSessionSummary = ({ workoutKey, onBack, onStart }) => {
                    transition-all duration-300 transform hover:-translate-y-1"
         >
           <span className="flex items-center justify-center gap-3">
-            <span className="text-xl">🚀</span>
+            {/* <span className="text-xl">🚀</span> */}
             Start Workout
-            <span className="text-xl">✨</span>
+            {/* <span className="text-xl">✨</span> */}
           </span>
           <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
           
