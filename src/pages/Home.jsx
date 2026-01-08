@@ -20,7 +20,7 @@ const Home = ({ onSelectWorkout }) => {
           </div>
           
           <h1 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 bg-clip-text text-transparent">
-            Be Fit and Fabulous
+            Fitly - Be Fit and Fabulous
           </h1>
           
           <p className="text-rose-400 text-lg">

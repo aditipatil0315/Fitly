@@ -11,13 +11,13 @@ const WorkoutSummary = ({ summary, onBack }) => {
   };
 
   // Get flower based on percentage
-  // const getCelebrationFlower = () => {
-  //   if (percentage === 100) return "💐";
-  //   if (percentage >= 80) return "🌺";
-  //   if (percentage >= 60) return "🌷";
-  //   if (percentage >= 40) return "🌼";
-  //   return "🌸";
-  // };
+  const getCelebrationFlower = () => {
+    if (percentage === 100) return "💐";
+    if (percentage >= 80) return "🌺";
+    if (percentage >= 60) return "🌷";
+    if (percentage >= 40) return "🌼";
+    return "🌸";
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-lavender-50 to-peach-50 flex items-center justify-center px-4 py-8">
